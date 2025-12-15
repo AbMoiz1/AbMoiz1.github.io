@@ -18,7 +18,7 @@ body {
 
 /* Header Styles */
 header {
-  background: linear-gradient(135deg, rgba(30, 30, 50, 0.95) 0%, rgba(20, 20, 40, 0.95) 100%);
+  background: linear-gradient(135deg, #0b0f1a 0%, #121a2f 45%, #1a2340 100%);
   padding: 40px;
   margin-bottom: 30px;
   border-radius: 12px;
