@@ -2,33 +2,111 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Abdul Moiz | Software Engineer</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <h1>Abdul Moiz</h1>
-    <p>Software Engineer | AI | MLOps | React Native</p>
-    <a href="https://github.com/AbMoiz1">GitHub</a>
+    <div class="header-content">
+      <h1>Abdul Moiz Bin Tahir</h1>
+      <p class="tagline">DevOps Engineer | MLOps Engineer | Computer Science Graduate</p>
+      <div class="contact-info">
+        <a href="mailto:abdulmoiztahir21@gmail.com">Email</a>
+        <a href="https://github.com/AbMoiz1" target="_blank">GitHub</a>
+        <span>+92 333 8543570</span>
+      </div>
+    </div>
   </header>
 
-  <section>
-    <h2>Projects</h2>
+  <section class="about">
+    <h2>About Me</h2>
+    <p>DevOps/MLOps Engineer and Computer Science graduate from FAST National University with hands-on experience in automation, CI/CD pipelines, and machine learning operations. During my internship at Easypaisa Digital Bank, I contributed to building and optimizing internal fintech solutions, working with CI/CD pipelines to improve system reliability and delivery speed.</p>
+    <p>I specialize in automating deployment workflows, implementing DevSecOps practices, and building MLOps pipelines for scalable AI solutions. Passionate about infrastructure automation, continuous integration/deployment, and bridging the gap between development and operations.</p>
+    
+    <div class="skills-grid">
+      <div class="skill-category">
+        <h3>DevOps & Tools</h3>
+        <p>Git, GitHub, Jenkins, Docker, CI/CD Pipelines, Linux, Kubernetes</p>
+      </div>
+      <div class="skill-category">
+        <h3>Programming</h3>
+        <p>Python, C/C++, JavaScript, SQL, Node.js</p>
+      </div>
+      <div class="skill-category">
+        <h3>Frameworks & Libraries</h3>
+        <p>React Native, Django, FastAPI, REST APIs</p>
+      </div>
+      <div class="skill-category">
+        <h3>ML/AI Tools</h3>
+        <p>MLflow, TensorFlow, Google Colab</p>
+      </div>
+    </div>
+  </section>
 
+  <section class="projects">
+    <h2>Featured Projects</h2>
+    
     <div class="project">
-      <h3>Angel Eyes – Baby Monitoring App</h3>
-      <p>AI-powered baby monitoring app detecting movement, crying, and unsafe sleep positions.</p>
-      <p><strong>Tech:</strong> React Native, Node.js, Computer Vision</p>
-      <a href="https://github.com/AbMoiz1/angel-eyes">GitHub Repo</a>
+      <div class="project-header">
+        <h3>Angel Eyes – AI Baby Monitoring System</h3>
+        <span class="project-tag fyp">Final Year Project</span>
+      </div>
+      <p class="project-description">An AI-powered mobile application designed to enhance infant safety through intelligent monitoring and real-time alerts. The system uses computer vision to detect unsafe sleeping positions, crying patterns, and environmental hazards.</p>
+      <div class="features">
+        <h4>Key Features:</h4>
+        <ul>
+          <li>Real-time video monitoring with YOLOv8 object detection</li>
+          <li>AI-driven safety detection for unsafe sleep positions and objects in crib</li>
+          <li>Smart alert system for instant caregiver notifications</li>
+          <li>Secure video storage with AES encryption</li>
+          <li>Cross-platform mobile app built with React Native</li>
+        </ul>
+      </div>
+      <p><strong>Tech Stack:</strong> React Native, Django, YOLOv8, Node.js, Computer Vision, AES Encryption</p>
+      <a href="https://github.com/AbMoiz1/angel-eyes-Deployment" target="_blank" class="project-link">View on GitHub →</a>
     </div>
 
     <div class="project">
-      <h3>E-commerce Ad Creative Generator</h3>
-      <p>MLOps-based system for generating ad creatives using AI.</p>
-      <p><strong>Tech:</strong> Python, FastAPI, Docker, Kubernetes</p>
-      <a href="https://github.com/MLOPS-Fall-2025/e-commerce-ad-creative-generator-AbMoiz1">
-        GitHub Repo
-      </a>
+      <div class="project-header">
+        <h3>DevSecOps Netflix Clone Deployment</h3>
+        <span class="project-tag devsecops">DevSecOps</span>
+      </div>
+      <p class="project-description">A comprehensive DevSecOps project implementing a complete CI/CD pipeline for deploying a Netflix clone application with integrated security scanning, monitoring, and automated deployment to Kubernetes.</p>
+      <div class="features">
+        <h4>Key Features:</h4>
+        <ul>
+          <li>Automated CI/CD pipeline using Jenkins</li>
+          <li>Code quality analysis with SonarQube</li>
+          <li>Security scanning with Trivy and OWASP Dependency Check</li>
+          <li>Docker containerization and image optimization</li>
+          <li>Kubernetes deployment with ArgoCD for GitOps</li>
+          <li>Monitoring and observability with Prometheus and Grafana</li>
+        </ul>
+      </div>
+      <p><strong>Tech Stack:</strong> Jenkins, Docker, Kubernetes, SonarQube, Trivy, ArgoCD, Prometheus, Grafana, Node.js</p>
+      <a href="https://github.com/AbMoiz1/DevSecOps-Netflix-Project" target="_blank" class="project-link">View on GitHub →</a>
+    </div>
+
+    <div class="project">
+      <div class="project-header">
+        <h3>E-Commerce Ad Creative Generator</h3>
+        <span class="project-tag mlops">MLOps</span>
+      </div>
+      <p class="project-description">An MLOps-based system that leverages AI to automatically generate compelling ad creatives for e-commerce products. The platform streamlines the creative process and helps businesses scale their marketing efforts efficiently.</p>
+      <div class="features">
+        <h4>Key Features:</h4>
+        <ul>
+          <li>AI-powered ad creative generation using machine learning models</li>
+          <li>Automated ML pipeline with MLflow for experiment tracking</li>
+          <li>RESTful API built with FastAPI for integration</li>
+          <li>Docker containerization for consistent deployments</li>
+          <li>Scalable architecture with Kubernetes orchestration</li>
+          <li>Continuous training and model versioning</li>
+        </ul>
+      </div>
+      <p><strong>Tech Stack:</strong> Python, FastAPI, Docker, Kubernetes, MLflow, Machine Learning</p>
+      <a href="https://github.com/AbMoiz1/e-commerce-ad-creative-generator-AbMoiz1" target="_blank" class="project-link">View on GitHub →</a>
     </div>
   </section>
 </body>
