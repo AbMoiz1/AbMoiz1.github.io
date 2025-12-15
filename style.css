@@ -1,4 +1,4 @@
-/* Modern Dark Mode Portfolio with Animations */
+/* Calming Green Portfolio with Relaxing Animations */
 
 * {
   margin: 0;
@@ -9,8 +9,8 @@
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   line-height: 1.6;
-  color: #e0e0e0;
-  background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+  color: #2c3e50;
+  background: linear-gradient(135deg, #e8f5e9 0%, #b2dfdb 50%, #c8e6c9 100%);
   background-attachment: fixed;
   min-height: 100vh;
   padding: 20px;
@@ -18,13 +18,13 @@ body {
 
 /* Header Styles */
 header {
-  background: linear-gradient(135deg, #0b0f1a 0%, #121a2f 45%, #1a2340 100%);
+  background: linear-gradient(135deg, #ffffff 0%, #f0f9f4 45%, #e8f5e9 100%);
   padding: 40px;
   margin-bottom: 30px;
   border-radius: 12px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5), 0 0 20px rgba(88, 166, 255, 0.1);
+  box-shadow: 0 10px 40px rgba(46, 125, 50, 0.15), 0 0 20px rgba(129, 199, 132, 0.1);
   text-align: center;
-  border: 1px solid rgba(88, 166, 255, 0.2);
+  border: 1px solid rgba(129, 199, 132, 0.3);
   backdrop-filter: blur(10px);
   animation: fadeInDown 0.8s ease-out;
 }
@@ -42,7 +42,7 @@ header {
 
 .header-content h1 {
   font-size: 2.5em;
-  background: linear-gradient(135deg, #58a6ff 0%, #a371f7 50%, #ff6ec7 100%);
+  background: linear-gradient(135deg, #2e7d32 0%, #4caf50 50%, #66bb6a 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -63,7 +63,7 @@ header {
 
 .tagline {
   font-size: 1.2em;
-  background: linear-gradient(90deg, #58a6ff 0%, #a371f7 50%, #ff6ec7 100%);
+  background: linear-gradient(90deg, #2e7d32 0%, #4caf50 50%, #66bb6a 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -83,14 +83,14 @@ header {
 
 .contact-info a,
 .contact-info span {
-  color: #e0e0e0;
+  color: #2c3e50;
   text-decoration: none;
   padding: 10px 20px;
   border-radius: 8px;
-  background: linear-gradient(135deg, rgba(88, 166, 255, 0.1) 0%, rgba(163, 113, 247, 0.1) 100%);
+  background: linear-gradient(135deg, rgba(129, 199, 132, 0.15) 0%, rgba(165, 214, 167, 0.15) 100%);
   transition: all 0.4s ease;
   font-size: 0.95em;
-  border: 2px solid rgba(88, 166, 255, 0.3);
+  border: 2px solid rgba(129, 199, 132, 0.4);
   position: relative;
   overflow: hidden;
 }
@@ -103,7 +103,7 @@ header {
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(88, 166, 255, 0.3), transparent);
+  background: linear-gradient(90deg, transparent, rgba(129, 199, 132, 0.3), transparent);
   transition: left 0.5s ease;
 }
 
@@ -112,24 +112,24 @@ header {
 }
 
 .contact-info a:hover {
-  background: linear-gradient(135deg, #58a6ff 0%, #a371f7 100%);
+  background: linear-gradient(135deg, #4caf50 0%, #66bb6a 100%);
   color: white;
   transform: translateY(-3px);
-  border-color: #58a6ff;
-  box-shadow: 0 8px 25px rgba(88, 166, 255, 0.4);
+  border-color: #4caf50;
+  box-shadow: 0 8px 25px rgba(76, 175, 80, 0.4);
 }
 
 /* Section Styles */
 section {
-  background: linear-gradient(135deg, rgba(30, 30, 50, 0.95) 0%, rgba(20, 20, 40, 0.95) 100%);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(240, 249, 244, 0.95) 100%);
   padding: 40px;
   margin-bottom: 30px;
   border-radius: 12px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5), 0 0 20px rgba(88, 166, 255, 0.05);
+  box-shadow: 0 10px 40px rgba(46, 125, 50, 0.1), 0 0 20px rgba(129, 199, 132, 0.05);
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
-  border: 1px solid rgba(88, 166, 255, 0.2);
+  border: 1px solid rgba(129, 199, 132, 0.3);
   backdrop-filter: blur(10px);
   animation: fadeInUp 0.8s ease-out;
 }
@@ -147,14 +147,14 @@ section {
 
 section h2 {
   font-size: 2em;
-  background: linear-gradient(135deg, #58a6ff 0%, #a371f7 100%);
+  background: linear-gradient(135deg, #2e7d32 0%, #4caf50 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   margin-bottom: 25px;
   padding-bottom: 15px;
   border-bottom: 3px solid;
-  border-image: linear-gradient(90deg, #58a6ff 0%, #a371f7 50%, #ff6ec7 100%) 1;
+  border-image: linear-gradient(90deg, #2e7d32 0%, #4caf50 50%, #66bb6a 100%) 1;
   font-weight: 700;
   position: relative;
 }
@@ -166,7 +166,7 @@ section h2::after {
   left: 0;
   width: 0;
   height: 3px;
-  background: linear-gradient(90deg, #58a6ff 0%, #a371f7 50%, #ff6ec7 100%);
+  background: linear-gradient(90deg, #2e7d32 0%, #4caf50 50%, #66bb6a 100%);
   animation: borderExpand 1.5s ease-out forwards;
 }
 
@@ -179,7 +179,7 @@ section h2::after {
 /* About Section */
 .about p {
   font-size: 1.1em;
-  color: #b0b0b0;
+  color: #546e7a;
   margin-bottom: 20px;
   text-align: justify;
   line-height: 1.8;
@@ -193,13 +193,13 @@ section h2::after {
 }
 
 .skill-category {
-  background: linear-gradient(135deg, rgba(88, 166, 255, 0.15) 0%, rgba(163, 113, 247, 0.15) 70%, rgba(255, 110, 199, 0.15) 100%);
+  background: linear-gradient(135deg, rgba(129, 199, 132, 0.2) 0%, rgba(165, 214, 167, 0.2) 70%, rgba(200, 230, 201, 0.2) 100%);
   padding: 25px;
   border-radius: 12px;
-  border: 2px solid rgba(88, 166, 255, 0.3);
-  color: white;
+  border: 2px solid rgba(129, 199, 132, 0.4);
+  color: #2c3e50;
   transition: all 0.4s ease;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 5px 20px rgba(46, 125, 50, 0.1);
   position: relative;
   overflow: hidden;
 }
@@ -211,7 +211,7 @@ section h2::after {
   left: -50%;
   width: 200%;
   height: 200%;
-  background: linear-gradient(45deg, transparent, rgba(88, 166, 255, 0.1), transparent);
+  background: linear-gradient(45deg, transparent, rgba(129, 199, 132, 0.15), transparent);
   transform: rotate(45deg);
   transition: all 0.6s ease;
 }
@@ -223,34 +223,34 @@ section h2::after {
 
 .skill-category:hover {
   transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 15px 40px rgba(88, 166, 255, 0.4);
-  border-color: #58a6ff;
-  background: linear-gradient(135deg, rgba(88, 166, 255, 0.25) 0%, rgba(163, 113, 247, 0.25) 70%, rgba(255, 110, 199, 0.25) 100%);
+  box-shadow: 0 15px 40px rgba(76, 175, 80, 0.25);
+  border-color: #4caf50;
+  background: linear-gradient(135deg, rgba(129, 199, 132, 0.35) 0%, rgba(165, 214, 167, 0.35) 70%, rgba(200, 230, 201, 0.35) 100%);
 }
 
 .skill-category h3 {
   font-size: 1.3em;
   margin-bottom: 12px;
   font-weight: 600;
-  color: #58a6ff;
+  color: #2e7d32;
 }
 
 .skill-category p {
   font-size: 0.95em;
   line-height: 1.6;
-  color: #d0d0d0;
+  color: #546e7a;
 }
 
 /* Project Styles */
 .project {
-  background: linear-gradient(135deg, rgba(40, 40, 60, 0.8) 0%, rgba(30, 30, 50, 0.8) 100%);
+  background: linear-gradient(135deg, rgba(245, 250, 245, 0.9) 0%, rgba(240, 248, 240, 0.9) 100%);
   padding: 30px;
   margin-bottom: 25px;
   border-radius: 12px;
   border-left: 5px solid;
-  border-image: linear-gradient(180deg, #58a6ff 0%, #a371f7 50%, #ff6ec7 100%) 1;
+  border-image: linear-gradient(180deg, #2e7d32 0%, #4caf50 50%, #66bb6a 100%) 1;
   transition: all 0.4s ease;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 5px 20px rgba(46, 125, 50, 0.1);
   position: relative;
   overflow: hidden;
 }
@@ -262,7 +262,7 @@ section h2::after {
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(88, 166, 255, 0.1), transparent);
+  background: linear-gradient(90deg, transparent, rgba(129, 199, 132, 0.15), transparent);
   transition: left 0.6s ease;
 }
 
@@ -272,26 +272,26 @@ section h2::after {
 
 .project:hover {
   transform: translateX(10px);
-  box-shadow: 0 10px 40px rgba(88, 166, 255, 0.3);
-  background: linear-gradient(135deg, rgba(40, 40, 60, 0.95) 0%, rgba(30, 30, 50, 0.95) 100%);
+  box-shadow: 0 10px 40px rgba(76, 175, 80, 0.2);
+  background: linear-gradient(135deg, rgba(245, 250, 245, 1) 0%, rgba(240, 248, 240, 1) 100%);
   border-left-width: 8px;
 }
 
 .project h3 {
   font-size: 1.5em;
-  color: #58a6ff;
+  color: #2e7d32;
   font-weight: 600;
   margin-bottom: 15px;
   transition: color 0.3s ease;
 }
 
 .project:hover h3 {
-  color: #a371f7;
+  color: #4caf50;
 }
 
 .project-description {
   font-size: 1.05em;
-  color: #b0b0b0;
+  color: #546e7a;
   margin-bottom: 15px;
   line-height: 1.7;
 }
@@ -300,13 +300,13 @@ section h2::after {
   display: inline-block;
   margin-top: 15px;
   padding: 12px 28px;
-  background: linear-gradient(135deg, #58a6ff 0%, #a371f7 100%);
+  background: linear-gradient(135deg, #4caf50 0%, #66bb6a 100%);
   color: white;
   text-decoration: none;
   border-radius: 8px;
   transition: all 0.4s ease;
   font-weight: 500;
-  box-shadow: 0 5px 20px rgba(88, 166, 255, 0.3);
+  box-shadow: 0 5px 20px rgba(76, 175, 80, 0.3);
   position: relative;
   overflow: hidden;
 }
@@ -330,9 +330,9 @@ section h2::after {
 }
 
 .project-link:hover {
-  background: linear-gradient(135deg, #a371f7 0%, #ff6ec7 100%);
+  background: linear-gradient(135deg, #66bb6a 0%, #81c784 100%);
   transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 8px 30px rgba(163, 113, 247, 0.5);
+  box-shadow: 0 8px 30px rgba(102, 187, 106, 0.5);
 }
 
 .project-link:active {
@@ -383,7 +383,7 @@ html {
 
 /* Selection color */
 ::selection {
-  background: linear-gradient(135deg, #58a6ff 0%, #a371f7 100%);
+  background: linear-gradient(135deg, #4caf50 0%, #66bb6a 100%);
   color: white;
 }
 
@@ -393,27 +393,27 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-  background: #1a1a2e;
+  background: #e8f5e9;
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #58a6ff 0%, #a371f7 50%, #ff6ec7 100%);
+  background: linear-gradient(180deg, #2e7d32 0%, #4caf50 50%, #66bb6a 100%);
   border-radius: 10px;
-  border: 2px solid #1a1a2e;
+  border: 2px solid #e8f5e9;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #a371f7 0%, #ff6ec7 100%);
+  background: linear-gradient(180deg, #4caf50 0%, #66bb6a 100%);
 }
 
 /* Glow effect animation */
 @keyframes glow {
   0%, 100% {
-    box-shadow: 0 0 5px rgba(88, 166, 255, 0.5);
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
   }
   50% {
-    box-shadow: 0 0 20px rgba(88, 166, 255, 0.8), 0 0 30px rgba(163, 113, 247, 0.6);
+    box-shadow: 0 0 20px rgba(76, 175, 80, 0.8), 0 0 30px rgba(129, 199, 132, 0.6);
   }
 }
 
