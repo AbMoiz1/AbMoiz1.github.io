@@ -1,187 +1,578 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Abdul Moiz Bin Tahir — DevOps & MLOps Engineer. CI/CD, Kubernetes, AWS, Terraform.">
+  <meta name="description" content="Abdul Moiz Bin Tahir — DevOps & Cloud Engineer. CI/CD, Kubernetes, AWS, Terraform.">
   <meta name="theme-color" content="#FF9900">
- 
+
   <!-- Open Graph -->
   <meta property="og:title" content="Abdul Moiz Bin Tahir | DevOps & Cloud Engineer">
   <meta property="og:description" content="Cloud engineer specialising in CI/CD, Kubernetes, and MLOps pipelines.">
   <meta property="og:type" content="website">
- 
-  <title>Abdul Moiz Bin Tahir | DevOps &amp; MLOps Engineer</title>
- 
-  <link rel="stylesheet" href="style.css">
- 
-  <!-- Preconnect for Google Fonts (already imported in CSS) -->
+
+  <title>Abdul Moiz Bin Tahir | DevOps &amp; Cloud Engineer</title>
+
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Rajdhani:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="site-wrapper">
- 
-    <!-- ══════════════════════════════════════
-         HEADER
-    ══════════════════════════════════════ -->
-    <header>
-      <div class="header-content">
-        <div class="badge">
+
+  <!-- ═══ Particle Canvas Background ═══ -->
+  <canvas id="particles" aria-hidden="true"></canvas>
+
+  <!-- ═══ Custom Cursor Glow ═══ -->
+  <div class="cursor-glow" aria-hidden="true"></div>
+
+  <!-- ═══ Navigation ═══ -->
+  <nav class="navbar" id="navbar" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">
+        <span class="logo-bracket">&lt;</span>AM<span class="logo-bracket">/&gt;</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+        <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
+        <li><a href="#experience" class="nav-link" data-section="experience">Experience</a></li>
+        <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
+        <li><a href="#certifications" class="nav-link" data-section="certifications">Certs</a></li>
+        <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="nav-hamburger" id="navHamburger" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ═══ Mobile Menu Overlay ═══ -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <ul class="mobile-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#certifications">Certs</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+
+  <main class="site-wrapper">
+
+    <!-- ═══ HERO ═══ -->
+    <header class="hero" id="hero">
+      <div class="hero-content">
+        <div class="badge animate-on-scroll">
           <span class="badge-dot" aria-hidden="true"></span>
           Available for Opportunities
         </div>
- 
-        <h1>Abdul Moiz<br><span>Bin Tahir</span></h1>
- 
-        <p class="tagline">DevOps &amp; Cloud Engineer &nbsp;·&nbsp; CS Graduate &nbsp;·&nbsp; </p>
- 
-        <nav class="contact-info" aria-label="Contact links">
-          <a href="mailto:abdulmoiztahir21@gmail.com" aria-label="Email">
-            📧 Email
+
+        <h1 class="hero-title animate-on-scroll">
+          <span class="hero-greeting">Hi, I'm</span>
+          <span class="hero-name">Abdul Moiz</span>
+          <span class="hero-name accent">Bin Tahir</span>
+        </h1>
+
+        <div class="hero-typed animate-on-scroll">
+          <span class="typed-prefix">I build&nbsp;</span>
+          <span class="typed-text" id="typedText"></span>
+          <span class="typed-cursor" aria-hidden="true">|</span>
+        </div>
+
+        <p class="hero-subtitle animate-on-scroll">
+          DevOps &amp; Cloud Engineer &nbsp;·&nbsp; CS Graduate &nbsp;·&nbsp; 
+        </p>
+
+        <div class="hero-cta animate-on-scroll">
+          <a href="#projects" class="btn btn-primary">
+            <i data-lucide="rocket"></i> View Projects
           </a>
-          <a href="https://linkedin.com/in/abdul-moiz-i0457/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
-            💼 LinkedIn
+          <a href="#contact" class="btn btn-outline">
+            <i data-lucide="send"></i> Get in Touch
           </a>
-          <a href="https://github.com/AbMoiz1" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
-            🐙 GitHub
-          </a>
-          <span aria-label="Phone number">📞 +92 333 8543570</span>
-        </nav>
+        </div>
+
+        <div class="hero-stats animate-on-scroll">
+          <div class="stat">
+            <span class="stat-number" data-count="4">0</span>+
+            <span class="stat-label">Projects</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number" data-count="1">0</span>+
+            <span class="stat-label">Certifications</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number" data-count="10">0</span>+
+            <span class="stat-label">Technologies</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="scroll-indicator animate-on-scroll" aria-hidden="true">
+        <div class="scroll-mouse">
+          <div class="scroll-wheel"></div>
+        </div>
+        <span>Scroll Down</span>
       </div>
     </header>
- 
-    <!-- ══════════════════════════════════════
-         ABOUT
-    ══════════════════════════════════════ -->
-    <section class="about" aria-labelledby="about-heading">
-      <h2 id="about-heading" data-icon="👤">About</h2>
- 
-      <p>DevOps/MLOps Engineer and Computer Science graduate from FAST National University with hands-on experience in automation, CI/CD pipelines, and machine learning operations. During my internship at <strong style="color:#fff;">Easypaisa Digital Bank</strong>, I contributed to building and optimizing internal fintech solutions, improving system reliability and delivery speed through robust pipeline work.</p>
- 
-      <p>I specialise in automating deployment workflows, implementing DevSecOps practices, and building MLOps pipelines for scalable AI solutions — passionate about infrastructure automation, continuous integration/deployment, and bridging the gap between development and operations.</p>
- 
-      <div class="skills-grid">
-        <div class="skill-category">
-          <h3>DevOps &amp; Tools</h3>
-          <p>Git · GitHub · Jenkins · Docker · CI/CD Pipelines · GitHub Actions · Linux · Kubernetes · Prometheus · Grafana · Airflow · MLflow · AWS</p>
+
+    <!-- ═══ ABOUT ═══ -->
+    <section class="section" id="about">
+      <div class="section-header animate-on-scroll">
+        <span class="section-tag">&lt;about&gt;</span>
+        <h2>About Me</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-text animate-on-scroll">
+          <p>DevOps/Cloud Engineer and Computer Science graduate from <span class="highlight">FAST National University</span> with hands-on experience in automation, CI/CD pipelines, and machine learning operations.</p>
+          <p>During my internship as a Release Engineering Intern at <span class="highlight">Easypaisa Digital Bank</span>, I managed release pipelines for internal fintech products, coordinated build and deployment cycles, and automated release workflows to improve system reliability and delivery speed.</p>
+          <p>I specialise in automating deployment workflows, implementing DevSecOps practices, and building MLOps pipelines for scalable AI solutions — passionate about infrastructure automation, continuous integration/deployment, and bridging the gap between development and operations.</p>
         </div>
-        <div class="skill-category">
-          <h3>Programming</h3>
-          <p>Python · Terraform · Bash / Shell Scripting</p>
-        </div>
-        <div class="skill-category">
-          <h3>Frameworks &amp; APIs</h3>
-          <p>React Native · Django · FastAPI · REST APIs</p>
-        </div>
-        <div class="skill-category">
-          <h3>ML / AI Tools</h3>
-          <p>Google Colab · MLflow · Experiment Tracking · Model Deployment</p>
+        <div class="about-info animate-on-scroll">
+          <div class="info-card">
+            <i data-lucide="graduation-cap"></i>
+            <div>
+              <h4>Education</h4>
+              <p>BS Computer Science — FAST NUCES</p>
+            </div>
+          </div>
+          <div class="info-card">
+            <i data-lucide="briefcase"></i>
+            <div>
+              <h4>Experience</h4>
+              <p>Release Engineering Intern @ Easypaisa</p>
+            </div>
+          </div>
+          <div class="info-card">
+            <i data-lucide="map-pin"></i>
+            <div>
+              <h4>Location</h4>
+              <p>Pakistan</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
- 
-    <!-- ══════════════════════════════════════
-         PROJECTS
-    ══════════════════════════════════════ -->
-    <section class="projects" aria-labelledby="projects-heading">
-      <h2 id="projects-heading" data-icon="🚀">Projects</h2>
- 
-      <article class="project">
-        <h3>DevSecOps Netflix Clone Deployment</h3>
-        <p class="project-description">
-          A comprehensive DevSecOps project implementing a complete CI/CD pipeline for deploying a Netflix clone application — with integrated security scanning (SAST/DAST), real-time monitoring, and automated deployment to Kubernetes.
-        </p>
-        <a href="https://github.com/AbMoiz1/DevSecOps-Netflix-Project"
-           target="_blank" rel="noopener noreferrer"
-           class="project-link"
-           aria-label="View DevSecOps Netflix Clone on GitHub">
-          View on GitHub
-        </a>
-      </article>
- 
-      <article class="project">
-        <h3>E-Commerce Ad Creative Generator</h3>
-        <p class="project-description">
-          An MLOps-based system that leverages AI to automatically generate compelling ad creatives for e-commerce products — built with robust pipeline orchestration, model versioning, and a FastAPI serving layer.
-        </p>
-        <a href="https://github.com/AbMoiz1/e-commerce-ad-creative-generator-AbMoiz1"
-           target="_blank" rel="noopener noreferrer"
-           class="project-link"
-           aria-label="View E-Commerce Ad Creative Generator on GitHub">
-          View on GitHub
-        </a>
-      </article>
- 
-      <article class="project">
-        <h3>3-Tier Architecture on AWS using Terraform</h3>
-        <p class="project-description">
-          Designed and deployed a scalable three-tier cloud infrastructure on AWS using Terraform — including VPC, public &amp; private subnets, Internet Gateway, NAT Gateway, EC2 instances, and an Application Load Balancer with full IaC practices.
-        </p>
-        <a href="https://github.com/AbMoiz1/3-Tier-Architecture.git"
-           target="_blank" rel="noopener noreferrer"
-           class="project-link"
-           aria-label="View 3-Tier AWS Architecture on GitHub">
-          View on GitHub
-        </a>
-      </article>
- 
-      <article class="project">
-        <h3>Angel Eyes — AI Baby Monitoring System</h3>
-        <p class="project-description">
-          An AI-powered mobile application designed to enhance infant safety through intelligent monitoring and real-time alerts using computer vision — deployed via a containerised microservice architecture.
-        </p>
-        <a href="https://github.com/AbMoiz1/angel-eyes-Deployment"
-           target="_blank" rel="noopener noreferrer"
-           class="project-link"
-           aria-label="View Angel Eyes on GitHub">
-          View on GitHub
-        </a>
-      </article>
+
+    <!-- ═══ SKILLS ═══ -->
+    <section class="section" id="skills">
+      <div class="section-header animate-on-scroll">
+        <span cla
+        <div class="tab-panel active" id="tab-devops">
+          <div class="skills-grid animate-on-scroll">
+            <div class="skill-chip"><i data-lucide="git-branch"></i> Git & GitHub</div>
+            <div class="skill-chip"><i data-lucide="workflow"></i> Jenkins</div>
+            <div class="skill-chip"><i data-lucide="container"></i> Docker</div>
+            <div class="skill-chip"><i data-lucide="boxes"></i> Kubernetes</div>
+            <div class="skill-chip"><i data-lucide="cloud"></i> AWS</div>
+            <div class="skill-chip"><i data-lucide="file-code"></i> Terraform</div>
+            <div class="skill-chip"><i data-lucide="activity"></i> Prometheus</div>
+            <div class="skill-chip"><i data-lucide="bar-chart-3"></i> Grafana</div>
+            <div class="skill-chip"><i data-lucide="play-circle"></i> GitHub Actions</div>
+            <div class="skill-chip"><i data-lucide="terminal"></i> Linux</div>
+            <div class="skill-chip"><i data-lucide="wind"></i> Airflow</div>
+            <div class="skill-chip"><i data-lucide="shield-check"></i> CI/CD Pipelines</div>
+          </div>
+        </div>
+        <div class="tab-panel" id="tab-programming">
+          <div class="skills-grid animate-on-scroll">
+            <div class="skill-chip"><i data-lucide="code"></i> Python</div>
+            <div class="skill-chip"><i data-lucide="file-code"></i> Terraform (HCL)</div>
+            <div class="skill-chip"><i data-lucide="terminal"></i> Bash / Shell</div>
+          </div>
+        </div>
+        <div class="tab-panel" id="tab-frameworks">
+          <div class="skills-grid animate-on-scroll">
+            <div class="skill-chip"><i data-lucide="smartphone"></i> React Native</div>
+            <div class="skill-chip"><i data-lucide="layout"></i> Django</div>
+            <div class="skill-chip"><i data-lucide="zap"></i> FastAPI</div>
+            <div class="skill-chip"><i data-lucide="globe"></i> REST APIs</div>
+          </div>
+        </div>
+        <div class="tab-panel" id="tab-mlai">
+          <div class="skills-grid animate-on-scroll">
+            <div class="skill-chip"><i data-lucide="brain"></i> Google Colab</div>
+            <div class="skill-chip"><i data-lucide="flask-conical"></i> MLflow</div>
+            <div class="skill-chip"><i data-lucide="test-tubes"></i> Experiment Tracking</div>
+            <div class="skill-chip"><i data-lucide="rocket"></i> Model Deployment</div>
+          </div>
+        </div>
+      </div>
     </section>
- 
-    <!-- ══════════════════════════════════════
-         CERTIFICATIONS
-    ══════════════════════════════════════ -->
-    <section aria-labelledby="certs-heading">
-      <h2 id="certs-heading" data-icon="🏅">Certifications</h2>
- 
-      <article class="project">
-        <h3>AWS Cloud Technical Essentials</h3>
-        <p class="cert-issuer">Amazon Web Services — via Coursera</p>
-        <a href="certificates/Coursera%20MDG198V7FN8G.pdf"
-           target="_blank" rel="noopener noreferrer"
-           class="cert-link"
-           aria-label="View AWS Cloud Technical Essentials certificate PDF">
-          📄 View Certificate
-        </a>
-      </article>
+
+    <!-- ═══ EXPERIENCE TIMELINE ═══ -->
+    <section class="section" id="experience">
+      <div class="section-header animate-on-scroll">
+        <span class="section-tag">&lt;experience&gt;</span>
+        <h2>Experience</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item animate-on-scroll">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="timeline-date">2025</span>
+            <h3>Release Engineering Intern</h3>
+            <h4>Easypaisa Digital Bank</h4>
+            <p>Managed and streamlined release pipelines for internal fintech products. Coordinated build, test, and deployment cycles to ensure smooth and timely releases. Automated release workflows using CI/CD tools, improved system reliability, and collaborated with development and QA teams to maintain release quality and delivery speed.</p>
+          </div>
+        </div>
+        <div class="timeline-item animate-on-scroll">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="timeline-date">2021 — 2025</span>
+            <h3>BS Computer Science</h3>
+            <h4>FAST National University (NUCES)</h4>
+            <p>Graduated with focus on cloud computing, DevOps, and machine learning operations. Completed multiple hands-on projects in infrastructure automation and AI deployment.</p>
+          </div>
+        </div>
+      </div>
     </section>
- 
-  </div><!-- /.site-wrapper -->
- 
-  <!-- ──────────────────────────────────────
-       Scroll-reveal via Intersection Observer (vanilla JS, no deps)
-  ────────────────────────────────────────── -->
+
+    <!-- ═══ PROJECTS ═══ -->
+    <section class="section" id="projects">
+      <div class="section-header animate-on-scroll">
+        <span class="section-tag">&lt;projects&gt;</span>
+        <h2>Projects</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="projects-grid">
+        <article class="project-card animate-on-scroll" data-tilt>
+          <div class="project-card-header">
+            <i data-lucide="folder-open" class="project-icon"></i>
+            <div class="project-links">
+              <a href="https://github.com/AbMoiz1/DevSecOps-Netflix-Project" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i data-lucide="github"></i></a>
+            </div>
+          </div>
+          <h3>DevSecOps Netflix Clone</h3>
+          <p>Comprehensive DevSecOps CI/CD pipeline for deploying a Netflix clone with integrated security scanning (SAST/DAST), real-time monitoring, and automated Kubernetes deployment.</p>
+          <div class="project-tags">
+            <span>Jenkins</span><span>Docker</span><span>K8s</span><span>Prometheus</span><span>SonarQube</span>
+          </div>
+        </article>
+
+        <article class="project-card animate-on-scroll" data-tilt>
+          <div class="project-card-header">
+            <i data-lucide="folder-open" class="project-icon"></i>
+            <div class="project-links">
+              <a href="https://github.com/AbMoiz1/e-commerce-ad-creative-generator-AbMoiz1" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i data-lucide="github"></i></a>
+            </div>
+          </div>
+          <h3>E-Commerce Ad Creative Generator</h3>
+          <p>MLOps-based system leveraging AI to auto-generate compelling ad creatives for e-commerce products with pipeline orchestration, model versioning, and FastAPI serving.</p>
+          <div class="project-tags">
+            <span>MLflow</span><span>FastAPI</span><span>Airflow</span><span>Docker</span><span>Python</span>
+          </div>
+        </article>
+
+        <article class="project-card animate-on-scroll" data-tilt>
+          <div class="project-card-header">
+            <i data-lucide="folder-open" class="project-icon"></i>
+            <div class="project-links">
+              <a href="https://github.com/AbMoiz1/3-Tier-Architecture.git" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i data-lucide="github"></i></a>
+            </div>
+          </div>
+          <h3>3-Tier Architecture on AWS</h3>
+          <p>Scalable three-tier cloud infrastructure on AWS using Terraform — VPC, subnets, Internet Gateway, NAT Gateway, EC2, and Application Load Balancer with full IaC practices.</p>
+          <div class="project-tags">
+            <span>Terraform</span><span>AWS</span><span>VPC</span><span>EC2</span><span>ALB</span>
+          </div>
+        </article>
+
+        <article class="project-card animate-on-scroll" data-tilt>
+          <div class="project-card-header">
+            <i data-lucide="folder-open" class="project-icon"></i>
+            <div class="project-links">
+              <a href="https://github.com/AbMoiz1/angel-eyes-Deployment" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i data-lucide="github"></i></a>
+            </div>
+          </div>
+          <h3>Angel Eyes — AI Baby Monitor</h3>
+          <p>AI-powered mobile app for infant safety through intelligent monitoring and real-time alerts using computer vision, deployed via containerised microservice architecture.</p>
+          <div class="project-tags">
+            <span>React Native</span><span>Docker</span><span>CV</span><span>FastAPI</span><span>AWS</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ═══ CERTIFICATIONS ═══ -->
+    <section class="section" id="certifications">
+      <div class="section-header animate-on-scroll">
+        <span class="section-tag">&lt;certifications&gt;</span>
+        <h2>Certifications</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="certs-grid">
+        <div class="cert-card animate-on-scroll">
+          <div class="cert-badge">
+            <i data-lucide="award"></i>
+          </div>
+          <div class="cert-info">
+            <h3>AWS Cloud Technical Essentials</h3>
+            <p>Amazon Web Services — via Coursera</p>
+            <a href="certificates/Coursera%20MDG198V7FN8G.pdf" target="_blank" rel="noopener noreferrer" class="cert-link">
+              <i data-lucide="external-link"></i> View Certificate
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ CONTACT ═══ -->
+    <section class="section" id="contact">
+      <div class="section-header animate-on-scroll">
+        <span class="section-tag">&lt;contact&gt;</span>
+        <h2>Get in Touch</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="contact-grid animate-on-scroll">
+        <a href="mailto:abdulmoiztahir21@gmail.com" class="contact-card">
+          <i data-lucide="mail"></i>
+          <h4>Email</h4>
+          <p>abdulmoiztahir21@gmail.com</p>
+        </a>
+        <a href="https://linkedin.com/in/abdul-moiz-i0457/" target="_blank" rel="noopener noreferrer" class="contact-card">
+          <i data-lucide="linkedin"></i>
+          <h4>LinkedIn</h4>
+          <p>abdul-moiz-i0457</p>
+        </a>
+        <a href="https://github.com/AbMoiz1" target="_blank" rel="noopener noreferrer" class="contact-card">
+          <i data-lucide="github"></i>
+          <h4>GitHub</h4>
+          <p>AbMoiz1</p>
+        </a>
+        <div class="contact-card">
+          <i data-lucide="phone"></i>
+          <h4>Phone</h4>
+          <p>+92 333 8543570</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <p>&copy; 2026 Abdul Moiz Bin Tahir. Built with <span class="highlight">&hearts;</span> and AWS colors.</p>
+      <div class="footer-links">
+        <a href="https://github.com/AbMoiz1" target="_blank" rel="noopener noreferrer"><i data-lucide="github"></i></a>
+        <a href="https://linkedin.com/in/abdul-moiz-i0457/" target="_blank" rel="noopener noreferrer"><i data-lucide="linkedin"></i></a>
+        <a href="mailto:abdulmoiztahir21@gmail.com"><i data-lucide="mail"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══ Back to Top ═══ -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i data-lucide="chevron-up"></i>
+  </button>
+
+  <!-- ═══ SCRIPTS ═══ -->
   <script>
-    const io = new IntersectionObserver(
-      entries => entries.forEach(e => {
-        if (e.isIntersecting) {
-          e.target.style.opacity = '1';
-          e.target.style.transform = 'translateY(0)';
-          io.unobserve(e.target);
+    // Initialize Lucide icons
+    lucide.createIcons();
+
+    // ── Particle Canvas ──
+    const canvas = document.getElementById('particles');
+    const ctx = canvas.getContext('2d');
+    let particles = [];
+    const PARTICLE_COUNT = 60;
+
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
+
+    class Particle {
+      constructor() { this.reset(); }
+      reset() {
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        this.size = Math.random() * 2 + 0.5;
+        this.speedX = (Math.random() - 0.5) * 0.4;
+        this.speedY = (Math.random() - 0.5) * 0.4;
+        this.opacity = Math.random() * 0.5 + 0.1;
+      }
+      update() {
+        this.x += this.speedX;
+        this.y += this.speedY;
+        if (this.x < 0 || this.x > canvas.width) this.speedX *= -1;
+        if (this.y < 0 || this.y > canvas.height) this.speedY *= -1;
+      }
+      draw() {
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(255, 153, 0, ${this.opacity})`;
+        ctx.fill();
+      }
+    }
+
+    for (let i = 0; i < PARTICLE_COUNT; i++) particles.push(new Particle());
+
+    function drawLines() {
+      for (let i = 0; i < particles.length; i++) {
+        for (let j = i + 1; j < particles.length; j++) {
+          const dx = particles[i].x - particles[j].x;
+          const dy = particles[i].y - particles[j].y;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+          if (dist < 150) {
+            ctx.beginPath();
+            ctx.moveTo(particles[i].x, particles[i].y);
+            ctx.lineTo(particles[j].x, particles[j].y);
+            ctx.strokeStyle = `rgba(255, 153, 0, ${0.06 * (1 - dist / 150)})`;
+            ctx.lineWidth = 0.5;
+            ctx.stroke();
+          }
         }
-      }),
-      { threshold: 0.12 }
-    );
- 
-    /* Stagger skill cards & project cards on scroll */
-    document.querySelectorAll('.skill-category, .project').forEach((el, i) => {
-      el.style.cssText = `opacity:0; transform:translateY(22px);
-        transition: opacity 0.55s ${i * 0.07}s ease, transform 0.55s ${i * 0.07}s ease`;
-      io.observe(el);
+      }
+    }
+
+    function animateParticles() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      particles.forEach(p => { p.update(); p.draw(); });
+      drawLines();
+      requestAnimationFrame(animateParticles);
+    }
+    animateParticles();
+
+    // ── Cursor Glow ──
+    const cursorGlow = document.querySelector('.cursor-glow');
+    let mouseX = 0, mouseY = 0;
+    document.addEventListener('mousemove', e => {
+      mouseX = e.clientX; mouseY = e.clientY;
+      cursorGlow.style.transform = `translate(${mouseX - 200}px, ${mouseY - 200}px)`;
     });
+
+    // ── Typed Text Effect ──
+    const phrases = ['CI/CD Pipelines', 'Cloud Infrastructure', 'MLOps Pipelines', 'Kubernetes Clusters', 'DevSecOps Solutions'];
+    let phraseIdx = 0, charIdx = 0, isDeleting = false;
+    const typedEl = document.getElementById('typedText');
+
+    function typeEffect() {
+      const current = phrases[phraseIdx];
+      typedEl.textContent = isDeleting ? current.substring(0, charIdx--) : current.substring(0, charIdx++);
+      let delay = isDeleting ? 40 : 80;
+      if (!isDeleting && charIdx > current.length) { delay = 2000; isDeleting = true; }
+      if (isDeleting && charIdx < 0) { isDeleting = false; phraseIdx = (phraseIdx + 1) % phrases.length; delay = 400; }
+      setTimeout(typeEffect, delay);
+    }
+    typeEffect();
+
+    // ── Navbar Scroll ──
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    // ── Scroll Spy ──
+    const sections = document.querySelectorAll('.section');
+    const navLinks = document.querySelectorAll('.nav-link');
+    const spyObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          navLinks.forEach(l => l.classList.remove('active'));
+          const active = document.querySelector(`.nav-link[data-section="${entry.target.id}"]`);
+          if (active) active.classList.add('active');
+        }
+      });
+    }, { threshold: 0.3 });
+    sections.forEach(s => spyObserver.observe(s));
+
+    // ── Scroll Reveal ──
+    const revealObserver = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('revealed'); revealObserver.unobserve(e.target); }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.animate-on-scroll').forEach(el => revealObserver.observe(el));
+
+    // ── Counter Animation ──
+    const counterObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const el = entry.target;
+          const target = +el.dataset.count;
+          let current = 0;
+          const step = Math.ceil(target / 30);
+          const timer = setInterval(() => {
+            current += step;
+            if (current >= target) { current = target; clearInterval(timer); }
+            el.textContent = current;
+          }, 50);
+          counterObserver.unobserve(el);
+        }
+      });
+    }, { threshold: 0.5 });
+    document.querySelectorAll('.stat-number').forEach(el => counterObserver.observe(el));
+
+    // ── Skill Tabs ──
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+        btn.classList.add('active');
+        document.getElementById('tab-' + btn.dataset.tab).classList.add('active');
+      });
+    });
+
+    // ── Tilt Effect on Project Cards ──
+    document.querySelectorAll('[data-tilt]').forEach(card => {
+      card.addEventListener('mousemove', e => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+        const rotateX = (y - centerY) / 20;
+        const rotateY = (centerX - x) / 20;
+        card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02,1.02,1.02)`;
+      });
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale3d(1,1,1)';
+      });
+    });
+
+    // ── Mobile Menu ──
+    const hamburger = document.getElementById('navHamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    hamburger.addEventListener('click', () => {
+      const open = hamburger.classList.toggle('open');
+      hamburger.setAttribute('aria-expanded', open);
+      mobileMenu.classList.toggle('open');
+      mobileMenu.setAttribute('aria-hidden', !open);
+    });
+    mobileMenu.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        hamburger.classList.remove('open');
+        mobileMenu.classList.remove('open');
+        mobileMenu.setAttribute('aria-hidden', 'true');
+        hamburger.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // ── Back to Top ──
+    const backToTop = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      backToTop.classList.toggle('visible', window.scrollY > 400);
+    });
+    backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
   </script>
 </body>
 </html>
- 
