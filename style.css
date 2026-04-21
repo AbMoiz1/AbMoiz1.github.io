@@ -800,6 +800,19 @@ body {
   letter-spacing: 0.04em;
 }
 
+.project-badge {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  padding: 3px 10px;
+  border-radius: 100px;
+  background: var(--accent-dim);
+  color: var(--accent);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  vertical-align: middle;
+  margin-left: 8px;
+}
+
 /* ─── Certifications ─── */
 .certs-grid {
   display: grid;
