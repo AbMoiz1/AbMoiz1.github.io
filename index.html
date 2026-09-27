@@ -1,34 +1,37 @@
-<!DOCTYPE html> 
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en-GB">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Abdul Moiz Bin Tahir — DevOps & Cloud Engineer. CI/CD, Kubernetes, AWS, Terraform.">
+  <meta name="description" content="Abdul Moiz Bin Tahir — Cloud Engineer / DevOps Engineer based in the UK. MSc student at the University of Salford. AWS, Terraform, CI/CD, Kubernetes and MLOps.">
   <meta name="theme-color" content="#FF9900">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Abdul Moiz Bin Tahir | DevOps & Cloud Engineer">
-  <meta property="og:description" content="Cloud engineer specialising in CI/CD, Kubernetes, and MLOps pipelines.">
+  <meta property="og:title" content="Abdul Moiz Bin Tahir | Cloud Engineer / DevOps Engineer (UK)">
+  <meta property="og:description" content="Cloud engineer with AWS and Terraform experience, specialising in CI/CD, Kubernetes and MLOps pipelines. Based in Greater Manchester, UK.">
   <meta property="og:type" content="website">
 
-  <title>Abdul Moiz Bin Tahir | DevOps &amp; Cloud Engineer</title>
+  <title>Abdul Moiz Bin Tahir | Cloud Engineer / DevOps Engineer</title>
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Rajdhani:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-  <!-- Lucide Icons CDN -->
-  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
 
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- ═══ Particle Canvas Background ═══ -->
+  <!-- Scroll progress bar -->
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- Particle canvas background -->
   <canvas id="particles" aria-hidden="true"></canvas>
 
-  <!-- ═══ Custom Cursor Glow ═══ -->
+  <!-- Cursor glow -->
   <div class="cursor-glow" aria-hidden="true"></div>
 
   <!-- ═══ Navigation ═══ -->
@@ -39,12 +42,17 @@
       </a>
       <ul class="nav-links">
         <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+        <li><a href="#experience" class="nav-link" data-section="experience">Experience</a></li>
+        <li><a href="#education" class="nav-link" data-section="education">Education</a></li>
         <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
         <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
         <li><a href="#certifications" class="nav-link" data-section="certifications">Certs</a></li>
         <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
       </ul>
       <div class="nav-actions">
+        <a href="Abdul_Moiz_Bin_Tahir_CV.pdf" class="nav-cv" download>
+          <i data-lucide="download"></i> CV
+        </a>
         <button class="nav-hamburger" id="navHamburger" aria-label="Toggle menu" aria-expanded="false">
           <span></span><span></span><span></span>
         </button>
@@ -52,10 +60,12 @@
     </div>
   </nav>
 
-  <!-- ═══ Mobile Menu Overlay ═══ -->
+  <!-- ═══ Mobile Menu ═══ -->
   <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
     <ul class="mobile-links">
       <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#education">Education</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#certifications">Certs</a></li>
@@ -70,13 +80,13 @@
       <div class="hero-content">
         <div class="badge animate-on-scroll">
           <span class="badge-dot" aria-hidden="true"></span>
-          Open to Connect
+          Open to Cloud &amp; DevOps roles in the UK
         </div>
 
-        <h1 class="hero-title animate-on-scroll">
-          <span class="hero-greeting">Hi, I'm</span>
-          <span class="hero-name">Abdul Moiz</span>
-          <span class="hero-name accent">Bin Tahir</span>
+        <h1 class="hero-title">
+          <span class="hero-greeting animate-on-scroll">Hi, I'm</span>
+          <span class="hero-name split-reveal" data-split>Abdul Moiz</span>
+          <span class="hero-name accent split-reveal" data-split>Bin Tahir</span>
         </h1>
 
         <div class="hero-typed animate-on-scroll">
@@ -86,39 +96,50 @@
         </div>
 
         <p class="hero-subtitle animate-on-scroll">
-          CS Graduate &nbsp;·&nbsp; Cloud &amp; Automation Enthusiast &nbsp;·&nbsp;
+          Cloud Engineer / DevOps Engineer. Previously Cloud Engineer at Cloudelligent, now studying for an MSc at the University of Salford.
         </p>
 
+        <!-- Animated CI/CD pipeline -->
+        <div class="pipeline animate-on-scroll" aria-label="Pipeline animation: commit, build, test, scan, deploy">
+          <div class="pipe-stage" data-stage="0"><i data-lucide="git-commit-horizontal"></i><span>commit</span></div>
+          <div class="pipe-link"><span class="pipe-flow"></span></div>
+          <div class="pipe-stage" data-stage="1"><i data-lucide="hammer"></i><span>build</span></div>
+          <div class="pipe-link"><span class="pipe-flow"></span></div>
+          <div class="pipe-stage" data-stage="2"><i data-lucide="flask-conical"></i><span>test</span></div>
+          <div class="pipe-link"><span class="pipe-flow"></span></div>
+          <div class="pipe-stage" data-stage="3"><i data-lucide="shield-check"></i><span>scan</span></div>
+          <div class="pipe-link"><span class="pipe-flow"></span></div>
+          <div class="pipe-stage" data-stage="4"><i data-lucide="cloud-upload"></i><span>deploy</span></div>
+        </div>
+
         <div class="hero-cta animate-on-scroll">
-          <a href="#projects" class="btn btn-primary">
-            <i data-lucide="rocket"></i> View Projects
+          <a href="#projects" class="btn btn-primary magnetic">
+            <i data-lucide="rocket"></i> View projects
           </a>
-          <a href="#contact" class="btn btn-outline">
-            <i data-lucide="send"></i> Get in Touch
+          <a href="Abdul_Moiz_Bin_Tahir_CV.pdf" class="btn btn-outline magnetic" download>
+            <i data-lucide="file-down"></i> Download CV
           </a>
         </div>
 
         <div class="hero-stats animate-on-scroll">
           <div class="stat">
-            <span class="stat-number" data-count="5">0</span>+
+            <span><span class="stat-number" data-count="2">0</span></span>
+            <span class="stat-label">Industry roles</span>
+          </div>
+          <div class="stat">
+            <span><span class="stat-number" data-count="5">0</span>+</span>
             <span class="stat-label">Projects</span>
           </div>
           <div class="stat">
-            <span class="stat-number" data-count="2">0</span>+
-            <span class="stat-label">Certifications</span>
-          </div>
-          <div class="stat">
-            <span class="stat-number" data-count="10">0</span>+
-            <span class="stat-label">Technologies</span>
+            <span><span class="stat-number" data-count="2">0</span></span>
+            <span class="stat-label">AWS certificates</span>
           </div>
         </div>
       </div>
 
-      <div class="scroll-indicator animate-on-scroll" aria-hidden="true">
-        <div class="scroll-mouse">
-          <div class="scroll-wheel"></div>
-        </div>
-        <span>Scroll Down</span>
+      <div class="scroll-indicator" aria-hidden="true">
+        <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
+        <span>Scroll</span>
       </div>
     </header>
 
@@ -126,83 +147,191 @@
     <section class="section" id="about">
       <div class="section-header animate-on-scroll">
         <span class="section-tag">&lt;about&gt;</span>
-        <h2>About Me</h2>
+        <h2>About me</h2>
         <div class="section-line"></div>
       </div>
 
       <div class="about-grid">
         <div class="about-text animate-on-scroll">
-          <p>Computer Science graduate from <span class="highlight">FAST National University</span> with a strong interest in automation, cloud systems, CI/CD practices, and machine learning operations.</p>
-          <p>I enjoy building reliable solutions, exploring modern cloud tools, and turning ideas into practical projects that combine technical depth with clean execution.</p>
-          <p>My focus is on creating thoughtful systems around deployment workflows, infrastructure, and AI-driven experiences while keeping the process simple, scalable, and maintainable.</p>
+          <p>I'm a Computer Science graduate from <span class="highlight">FAST National University</span> and a Cloud Engineer / DevOps Engineer with hands-on experience in <span class="highlight">AWS</span>, <span class="highlight">Terraform</span>, CI/CD and automation. I'm now based in Greater Manchester, studying for an MSc at the <span class="highlight">University of Salford</span>.</p>
+          <p>At Cloudelligent I provisioned and managed AWS infrastructure as code, automated deployments and applied cost-optimisation practices. Before that, on the Release team at Easypaisa Digital Bank, I built and maintained CI/CD pipelines with GitHub Actions for production fintech systems.</p>
+          <p>I care about the space between development and operations: pipelines that ship safely, infrastructure that can be rebuilt from code, and ML models that make it from a notebook to production.</p>
         </div>
         <div class="about-info animate-on-scroll">
+          <div class="info-card">
+            <i data-lucide="briefcase"></i>
+            <div>
+              <h4>Experience</h4>
+              <p>Cloud Engineer, Cloudelligent</p>
+            </div>
+          </div>
           <div class="info-card">
             <i data-lucide="graduation-cap"></i>
             <div>
               <h4>Education</h4>
-              <p>BS Computer Science — FAST NUCES</p>
-            </div>
-          </div>
-          <div class="info-card">
-            <i data-lucide="sparkles"></i>
-            <div>
-              <h4>Focus</h4>
-              <p>Cloud, Automation &amp; AI Projects</p>
+              <p>MSc, University of Salford<br>BS Computer Science, FAST NUCES</p>
             </div>
           </div>
           <div class="info-card">
             <i data-lucide="map-pin"></i>
             <div>
               <h4>Location</h4>
-              <p>Pakistan</p>
+              <p>Salford, Greater Manchester, UK</p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- ═══ EXPERIENCE ═══ -->
+    <section class="section" id="experience">
+      <div class="section-header animate-on-scroll">
+        <span class="section-tag">&lt;experience&gt;</span>
+        <h2>Experience</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="timeline" data-timeline>
+        <span class="timeline-progress" aria-hidden="true"></span>
+
+        <article class="timeline-item animate-on-scroll">
+          <span class="timeline-dot" aria-hidden="true"></span>
+          <div class="timeline-card">
+            <span class="timeline-date">Feb 2026 – Jun 2026</span>
+            <h3>Cloud Engineer</h3>
+            <h4>Cloudelligent · Pakistan</h4>
+            <ul class="timeline-points">
+              <li>Provisioned and managed AWS resources using Terraform as infrastructure as code.</li>
+              <li>Automated deployments, reducing manual steps in releasing infrastructure changes.</li>
+              <li>Applied AWS Well-Architected best practices for security, reliability and cost optimisation.</li>
+            </ul>
+            <div class="project-tags">
+              <span>AWS</span><span>Terraform</span><span>IaC</span><span>Cost optimisation</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="timeline-item animate-on-scroll">
+          <span class="timeline-dot" aria-hidden="true"></span>
+          <div class="timeline-card">
+            <span class="timeline-date">Jul 2025 – Sep 2025</span>
+            <h3>Release Engineering Intern</h3>
+            <h4>Easypaisa Digital Bank · Islamabad</h4>
+            <ul class="timeline-points">
+              <li>Worked in the Release team on deployment processes, CI/CD pipeline design and release management.</li>
+              <li>Built and maintained pipelines with Git and GitHub Actions, deploying applications to Azure and Railway.</li>
+              <li>Contributed to software testing and continuous integration, and monitored production releases with developers and operations teams.</li>
+            </ul>
+            <div class="project-tags">
+              <span>GitHub Actions</span><span>CI/CD</span><span>Azure</span><span>Release management</span><span>Agile</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ═══ EDUCATION ═══ -->
+    <section class="section" id="education">
+      <div class="section-header animate-on-scroll">
+        <span class="section-tag">&lt;education&gt;</span>
+        <h2>Education</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="edu-grid">
+        <article class="edu-card edu-current animate-on-scroll">
+          <div class="edu-top">
+            <i data-lucide="landmark"></i>
+            <span class="edu-status">In progress</span>
+          </div>
+          <h3>University of Salford</h3>
+          <p class="edu-degree">MSc Computer Science</p>
+          <p class="edu-meta">Salford, Greater Manchester, UK · Sep 2026 – Sep 2027 (expected)</p>
+          <p class="edu-desc">Postgraduate study building on industry experience in cloud and DevOps, with a focus on cloud systems, automation and applied machine learning.</p>
+        </article>
+
+        <article class="edu-card animate-on-scroll">
+          <div class="edu-top">
+            <i data-lucide="graduation-cap"></i>
+            <span class="edu-status done">Completed</span>
+          </div>
+          <h3>FAST National University (NUCES)</h3>
+          <p class="edu-degree">BS Computer Science</p>
+          <p class="edu-meta">Islamabad, Pakistan · Aug 2021 – Jan 2026</p>
+          <p class="edu-desc">Final year project: Angel Eyes, an AI-powered baby monitoring system using computer vision. Represented the university cricket team.</p>
+        </article>
+      </div>
+    </section>
+
     <!-- ═══ SKILLS ═══ -->
     <section class="section" id="skills">
       <div class="section-header animate-on-scroll">
-        <span cla
+        <span class="section-tag">&lt;skills&gt;</span>
+        <h2>Skills</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="skills-tabs animate-on-scroll" role="tablist">
+        <button class="tab-btn active" data-tab="devops" role="tab">DevOps &amp; Cloud</button>
+        <button class="tab-btn" data-tab="programming" role="tab">Programming</button>
+        <button class="tab-btn" data-tab="frameworks" role="tab">Frameworks &amp; APIs</button>
+        <button class="tab-btn" data-tab="mlai" role="tab">MLOps</button>
+        <button class="tab-btn" data-tab="practices" role="tab">Practices</button>
+      </div>
+
+      <div class="tab-panels">
         <div class="tab-panel active" id="tab-devops">
-          <div class="skills-grid animate-on-scroll">
-            <div class="skill-chip"><i data-lucide="git-branch"></i> Git & GitHub</div>
-            <div class="skill-chip"><i data-lucide="workflow"></i> Jenkins</div>
-            <div class="skill-chip"><i data-lucide="container"></i> Docker</div>
-            <div class="skill-chip"><i data-lucide="boxes"></i> Kubernetes</div>
+          <div class="skills-grid">
             <div class="skill-chip"><i data-lucide="cloud"></i> AWS</div>
             <div class="skill-chip"><i data-lucide="file-code"></i> Terraform</div>
+            <div class="skill-chip"><i data-lucide="container"></i> Docker</div>
+            <div class="skill-chip"><i data-lucide="boxes"></i> Kubernetes</div>
+            <div class="skill-chip"><i data-lucide="workflow"></i> Jenkins</div>
+            <div class="skill-chip"><i data-lucide="play-circle"></i> GitHub Actions</div>
+            <div class="skill-chip"><i data-lucide="git-branch"></i> Git &amp; GitHub</div>
+            <div class="skill-chip"><i data-lucide="cloud-cog"></i> Azure</div>
+            <div class="skill-chip"><i data-lucide="terminal"></i> Linux</div>
             <div class="skill-chip"><i data-lucide="activity"></i> Prometheus</div>
             <div class="skill-chip"><i data-lucide="bar-chart-3"></i> Grafana</div>
-            <div class="skill-chip"><i data-lucide="play-circle"></i> GitHub Actions</div>
-            <div class="skill-chip"><i data-lucide="terminal"></i> Linux</div>
-            <div class="skill-chip"><i data-lucide="wind"></i> Airflow</div>
-            <div class="skill-chip"><i data-lucide="shield-check"></i> CI/CD Pipelines</div>
+            <div class="skill-chip"><i data-lucide="shield-check"></i> SonarQube</div>
           </div>
         </div>
         <div class="tab-panel" id="tab-programming">
-          <div class="skills-grid animate-on-scroll">
+          <div class="skills-grid">
             <div class="skill-chip"><i data-lucide="code"></i> Python</div>
-            <div class="skill-chip"><i data-lucide="file-code"></i> Terraform (HCL)</div>
-            <div class="skill-chip"><i data-lucide="terminal"></i> Bash / Shell</div>
+            <div class="skill-chip"><i data-lucide="cpu"></i> C / C++</div>
+            <div class="skill-chip"><i data-lucide="database"></i> SQL</div>
+            <div class="skill-chip"><i data-lucide="file-code"></i> HCL (Terraform)</div>
+            <div class="skill-chip"><i data-lucide="terminal"></i> Bash</div>
           </div>
         </div>
         <div class="tab-panel" id="tab-frameworks">
-          <div class="skills-grid animate-on-scroll">
+          <div class="skills-grid">
+            <div class="skill-chip"><i data-lucide="zap"></i> FastAPI</div>
             <div class="skill-chip"><i data-lucide="smartphone"></i> React Native</div>
             <div class="skill-chip"><i data-lucide="layout"></i> Django</div>
-            <div class="skill-chip"><i data-lucide="zap"></i> FastAPI</div>
             <div class="skill-chip"><i data-lucide="globe"></i> REST APIs</div>
+            <div class="skill-chip"><i data-lucide="send"></i> Postman</div>
           </div>
         </div>
         <div class="tab-panel" id="tab-mlai">
-          <div class="skills-grid animate-on-scroll">
-            <div class="skill-chip"><i data-lucide="brain"></i> Google Colab</div>
+          <div class="skills-grid">
             <div class="skill-chip"><i data-lucide="flask-conical"></i> MLflow</div>
-            <div class="skill-chip"><i data-lucide="test-tubes"></i> Experiment Tracking</div>
-            <div class="skill-chip"><i data-lucide="rocket"></i> Model Deployment</div>
+            <div class="skill-chip"><i data-lucide="wind"></i> Airflow</div>
+            <div class="skill-chip"><i data-lucide="test-tubes"></i> Experiment tracking</div>
+            <div class="skill-chip"><i data-lucide="rocket"></i> Model deployment</div>
+            <div class="skill-chip"><i data-lucide="notebook"></i> Jupyter</div>
+            <div class="skill-chip"><i data-lucide="brain"></i> Google Colab</div>
+          </div>
+        </div>
+        <div class="tab-panel" id="tab-practices">
+          <div class="skills-grid">
+            <div class="skill-chip"><i data-lucide="repeat"></i> Agile</div>
+            <div class="skill-chip"><i data-lucide="git-merge"></i> Version control</div>
+            <div class="skill-chip"><i data-lucide="package-check"></i> Release management</div>
+            <div class="skill-chip"><i data-lucide="bug"></i> Debugging</div>
+            <div class="skill-chip"><i data-lucide="check-check"></i> Selenium testing</div>
+            <div class="skill-chip"><i data-lucide="piggy-bank"></i> Cloud cost optimisation</div>
           </div>
         </div>
       </div>
@@ -220,26 +349,22 @@
         <a href="https://github.com/AbMoiz1/DevSecOps-Netflix-Project" target="_blank" rel="noopener noreferrer" class="project-card animate-on-scroll" data-tilt>
           <div class="project-card-header">
             <i data-lucide="folder-open" class="project-icon"></i>
-            <div class="project-links">
-              <i data-lucide="github"></i>
-            </div>
+            <div class="project-links"><i data-lucide="github"></i></div>
           </div>
           <h3>DevSecOps Netflix Clone</h3>
-          <p>Comprehensive DevSecOps CI/CD pipeline for deploying a Netflix clone with integrated security scanning (SAST/DAST), real-time monitoring, and automated Kubernetes deployment.</p>
+          <p>End-to-end DevSecOps CI/CD pipeline for a containerised Netflix clone, with security scanning, monitoring and automated deployment to Kubernetes.</p>
           <div class="project-tags">
-            <span>Jenkins</span><span>Docker</span><span>K8s</span><span>Prometheus</span><span>SonarQube</span>
+            <span>Jenkins</span><span>GitHub Actions</span><span>Docker</span><span>K8s</span><span>SonarQube</span><span>Prometheus</span>
           </div>
         </a>
 
         <a href="https://github.com/AbMoiz1/e-commerce-ad-creative-generator-AbMoiz1" target="_blank" rel="noopener noreferrer" class="project-card animate-on-scroll" data-tilt>
           <div class="project-card-header">
             <i data-lucide="folder-open" class="project-icon"></i>
-            <div class="project-links">
-              <i data-lucide="github"></i>
-            </div>
+            <div class="project-links"><i data-lucide="github"></i></div>
           </div>
           <h3>E-Commerce Ad Creative Generator</h3>
-          <p>MLOps-based system leveraging AI to auto-generate compelling ad creatives for e-commerce products with pipeline orchestration, model versioning, and FastAPI serving.</p>
+          <p>MLOps pipeline that generates AI ad creatives for e-commerce products, with model training, versioning and deployment workflows served through FastAPI.</p>
           <div class="project-tags">
             <span>MLflow</span><span>FastAPI</span><span>Airflow</span><span>Docker</span><span>Python</span>
           </div>
@@ -248,12 +373,10 @@
         <a href="https://github.com/AbMoiz1/3-Tier-Architecture.git" target="_blank" rel="noopener noreferrer" class="project-card animate-on-scroll" data-tilt>
           <div class="project-card-header">
             <i data-lucide="folder-open" class="project-icon"></i>
-            <div class="project-links">
-              <i data-lucide="github"></i>
-            </div>
+            <div class="project-links"><i data-lucide="github"></i></div>
           </div>
           <h3>3-Tier Architecture on AWS</h3>
-          <p>Scalable three-tier cloud infrastructure on AWS using Terraform — VPC, subnets, Internet Gateway, NAT Gateway, EC2, and Application Load Balancer with full IaC practices.</p>
+          <p>Scalable three-tier AWS infrastructure built entirely in Terraform: VPC, public and private subnets, Internet and NAT gateways, EC2 and an Application Load Balancer.</p>
           <div class="project-tags">
             <span>Terraform</span><span>AWS</span><span>VPC</span><span>EC2</span><span>ALB</span>
           </div>
@@ -262,28 +385,24 @@
         <a href="https://github.com/AbMoiz1/Lost-and-Found-/tree/serverless-deployment" target="_blank" rel="noopener noreferrer" class="project-card animate-on-scroll" data-tilt>
           <div class="project-card-header">
             <i data-lucide="folder-open" class="project-icon"></i>
-            <div class="project-links">
-              <i data-lucide="github"></i>
-            </div>
+            <div class="project-links"><i data-lucide="github"></i></div>
           </div>
           <h3>Lost &amp; Found App</h3>
-          <p>Mobile application to help users report and recover lost items. Built with a cloud-backed architecture on AWS, featuring real-time notifications, item matching, and a clean user interface.</p>
+          <p>Mobile app for reporting and recovering lost items, backed by AWS with real-time notifications and item matching. Runs both server-based (EC2) and serverless (Lambda) backend components.</p>
           <div class="project-tags">
-            <span>React Native</span><span>AWS</span><span>FastAPI</span><span>Docker</span>
+            <span>React Native</span><span>FastAPI</span><span>AWS Lambda</span><span>EC2</span><span>Docker</span>
           </div>
         </a>
 
         <a href="https://github.com/talhasiddik/angel-eyes" target="_blank" rel="noopener noreferrer" class="project-card animate-on-scroll" data-tilt>
           <div class="project-card-header">
             <i data-lucide="folder-open" class="project-icon"></i>
-            <div class="project-links">
-              <i data-lucide="github"></i>
-            </div>
+            <div class="project-links"><i data-lucide="github"></i></div>
           </div>
-          <h3>Angel Eyes — AI Baby Monitor <span class="project-badge">Final Year Project</span></h3>
-          <p>AI-powered mobile app for infant safety through intelligent monitoring and real-time alerts using computer vision, deployed via containerised microservice architecture.</p>
+          <h3>Angel Eyes: AI Baby Monitor <span class="project-badge">Final year project</span></h3>
+          <p>AI-powered mobile app for infant safety, using computer vision for real-time activity detection and alerts, deployed as containerised microservices.</p>
           <div class="project-tags">
-            <span>React Native</span><span>Docker</span><span>CV</span><span>FastAPI</span><span>AWS</span>
+            <span>React Native</span><span>Python</span><span>Computer vision</span><span>REST APIs</span><span>Docker</span>
           </div>
         </a>
       </div>
@@ -300,26 +419,24 @@
       <div class="certs-grid">
         <div class="cert-card animate-on-scroll">
           <div class="cert-badge-img">
-            <img src="certificates/aws-certified-cloud-practitioner.png" alt="AWS Certified Cloud Practitioner Badge" />
+            <img src="certificates/aws-certified-cloud-practitioner.png" alt="AWS Certified Cloud Practitioner badge" />
           </div>
           <div class="cert-info">
             <h3>AWS Certified Cloud Practitioner</h3>
             <p>Amazon Web Services — Foundational</p>
             <a href="certificates/AWS%20Certified%20Cloud%20Practitioner%20certificate.pdf" target="_blank" rel="noopener noreferrer" class="cert-link">
-              <i data-lucide="external-link"></i> View Certificate
+              <i data-lucide="external-link"></i> View certificate
             </a>
           </div>
         </div>
 
         <div class="cert-card animate-on-scroll">
-          <div class="cert-badge">
-            <i data-lucide="award"></i>
-          </div>
+          <div class="cert-badge"><i data-lucide="award"></i></div>
           <div class="cert-info">
             <h3>AWS Cloud Technical Essentials</h3>
             <p>Amazon Web Services — via Coursera</p>
             <a href="certificates/Coursera%20MDG198V7FN8G.pdf" target="_blank" rel="noopener noreferrer" class="cert-link">
-              <i data-lucide="external-link"></i> View Certificate
+              <i data-lucide="external-link"></i> View certificate
             </a>
           </div>
         </div>
@@ -330,9 +447,11 @@
     <section class="section" id="contact">
       <div class="section-header animate-on-scroll">
         <span class="section-tag">&lt;contact&gt;</span>
-        <h2>Get in Touch</h2>
+        <h2>Get in touch</h2>
         <div class="section-line"></div>
       </div>
+
+      <p class="contact-lead animate-on-scroll">I'm looking for DevOps, Cloud and MLOps roles in the UK, including graduate and junior positions. The quickest way to reach me is email or phone.</p>
 
       <div class="contact-grid animate-on-scroll">
         <a href="mailto:abdulmoiztahir21@gmail.com" class="contact-card">
@@ -340,16 +459,20 @@
           <h4>Email</h4>
           <p>abdulmoiztahir21@gmail.com</p>
         </a>
-        <!-- LinkedIn removed per request -->
+        <a href="tel:+447771272171" class="contact-card">
+          <i data-lucide="phone"></i>
+          <h4>Phone (UK)</h4>
+          <p>07771 272171</p>
+        </a>
         <a href="https://github.com/AbMoiz1" target="_blank" rel="noopener noreferrer" class="contact-card">
           <i data-lucide="github"></i>
           <h4>GitHub</h4>
           <p>AbMoiz1</p>
         </a>
         <div class="contact-card">
-          <i data-lucide="phone"></i>
-          <h4>Phone</h4>
-          <p>+92 333 8543570</p>
+          <i data-lucide="map-pin"></i>
+          <h4>Location</h4>
+          <p>Salford, Greater Manchester</p>
         </div>
       </div>
     </section>
@@ -359,29 +482,51 @@
   <!-- ═══ FOOTER ═══ -->
   <footer class="footer">
     <div class="footer-inner">
-      <p>&copy; 2026 Abdul Moiz Bin Tahir. Built with <span class="highlight">&hearts;</span> and AWS colors.</p>
+      <p>&copy; 2026 Abdul Moiz Bin Tahir. Built with <span class="highlight">&hearts;</span> and AWS colours.</p>
       <div class="footer-links">
-        <a href="https://github.com/AbMoiz1" target="_blank" rel="noopener noreferrer"><i data-lucide="github"></i></a>
-        <a href="mailto:abdulmoiztahir21@gmail.com"><i data-lucide="mail"></i></a>
+        <a href="https://github.com/AbMoiz1" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i data-lucide="github"></i></a>
+        <a href="mailto:abdulmoiztahir21@gmail.com" aria-label="Email"><i data-lucide="mail"></i></a>
+        <a href="tel:+447771272171" aria-label="Phone"><i data-lucide="phone"></i></a>
       </div>
     </div>
   </footer>
 
-  <!-- ═══ Back to Top ═══ -->
+  <!-- Back to top -->
   <button class="back-to-top" id="backToTop" aria-label="Back to top">
     <i data-lucide="chevron-up"></i>
   </button>
 
   <!-- ═══ SCRIPTS ═══ -->
   <script>
-    // Initialize Lucide icons
-    lucide.createIcons();
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-    // ── Particle Canvas ──
+    // Icons
+    if (window.lucide) lucide.createIcons();
+
+    // ── Split-letter hero name reveal ──
+    let letterIndex = 0;
+    document.querySelectorAll('[data-split]').forEach(el => {
+      const text = el.textContent;
+      el.setAttribute('aria-label', text);
+      el.textContent = '';
+      [...text].forEach(ch => {
+        const span = document.createElement('span');
+        span.className = 'char';
+        span.setAttribute('aria-hidden', 'true');
+        span.textContent = ch === ' ' ? '\u00A0' : ch;
+        span.style.transitionDelay = (0.15 + letterIndex * 0.035) + 's';
+        letterIndex++;
+        el.appendChild(span);
+      });
+    });
+    requestAnimationFrame(() => document.body.classList.add('loaded'));
+
+    // ── Particle canvas ──
     const canvas = document.getElementById('particles');
     const ctx = canvas.getContext('2d');
     let particles = [];
-    const PARTICLE_COUNT = 60;
+    const PARTICLE_COUNT = window.innerWidth < 768 ? 30 : 60;
+    const pointer = { x: -9999, y: -9999 };
 
     function resizeCanvas() {
       canvas.width = window.innerWidth;
@@ -401,6 +546,10 @@
         this.opacity = Math.random() * 0.5 + 0.1;
       }
       update() {
+        // gentle repulsion from the pointer
+        const dx = this.x - pointer.x, dy = this.y - pointer.y;
+        const d = Math.hypot(dx, dy);
+        if (d < 120 && d > 0) { this.x += dx / d * 1.2; this.y += dy / d * 1.2; }
         this.x += this.speedX;
         this.y += this.speedY;
         if (this.x < 0 || this.x > canvas.width) this.speedX *= -1;
@@ -413,7 +562,6 @@
         ctx.fill();
       }
     }
-
     for (let i = 0; i < PARTICLE_COUNT; i++) particles.push(new Particle());
 
     function drawLines() {
@@ -433,46 +581,86 @@
         }
       }
     }
-
     function animateParticles() {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       particles.forEach(p => { p.update(); p.draw(); });
       drawLines();
       requestAnimationFrame(animateParticles);
     }
-    animateParticles();
+    if (!reduceMotion) animateParticles();
+    else particles.forEach(p => p.draw());
 
-    // ── Cursor Glow ──
+    // ── Cursor glow ──
     const cursorGlow = document.querySelector('.cursor-glow');
-    let mouseX = 0, mouseY = 0;
     document.addEventListener('mousemove', e => {
-      mouseX = e.clientX; mouseY = e.clientY;
-      cursorGlow.style.transform = `translate(${mouseX - 200}px, ${mouseY - 200}px)`;
+      pointer.x = e.clientX; pointer.y = e.clientY;
+      cursorGlow.style.transform = `translate(${e.clientX - 200}px, ${e.clientY - 200}px)`;
     });
 
-    // ── Typed Text Effect ──
-    const phrases = ['CI/CD Pipelines', 'Cloud Infrastructure', 'MLOps Pipelines', 'Kubernetes Clusters', 'DevSecOps Solutions'];
+    // ── Typed text ──
+    const phrases = ['CI/CD pipelines', 'AWS infrastructure', 'Terraform modules', 'MLOps pipelines', 'Kubernetes deployments', 'DevSecOps workflows'];
     let phraseIdx = 0, charIdx = 0, isDeleting = false;
     const typedEl = document.getElementById('typedText');
-
     function typeEffect() {
       const current = phrases[phraseIdx];
       typedEl.textContent = isDeleting ? current.substring(0, charIdx--) : current.substring(0, charIdx++);
       let delay = isDeleting ? 40 : 80;
       if (!isDeleting && charIdx > current.length) { delay = 2000; isDeleting = true; }
-      if (isDeleting && charIdx < 0) { isDeleting = false; phraseIdx = (phraseIdx + 1) % phrases.length; delay = 400; }
+      if (isDeleting && charIdx < 0) { isDeleting = false; charIdx = 0; phraseIdx = (phraseIdx + 1) % phrases.length; delay = 400; }
       setTimeout(typeEffect, delay);
     }
-    typeEffect();
+    if (reduceMotion) typedEl.textContent = phrases[0]; else typeEffect();
 
-    // ── Navbar Scroll ──
+    // ── Pipeline animation ──
+    const stages = document.querySelectorAll('.pipe-stage');
+    const links = document.querySelectorAll('.pipe-link');
+    let stageIdx = 0;
+    function runPipeline() {
+      if (stageIdx === 0) {
+        stages.forEach(s => s.classList.remove('done', 'running'));
+        links.forEach(l => l.classList.remove('active'));
+      }
+      if (stageIdx > 0) {
+        stages[stageIdx - 1].classList.replace('running', 'done');
+        links[stageIdx - 1].classList.add('active');
+      }
+      if (stageIdx < stages.length) {
+        stages[stageIdx].classList.add('running');
+        stageIdx++;
+        setTimeout(runPipeline, 900);
+      } else {
+        stageIdx = 0;
+        setTimeout(runPipeline, 2600);
+      }
+    }
+    if (reduceMotion) stages.forEach(s => s.classList.add('done'));
+    else setTimeout(runPipeline, 1200);
+
+    // ── Navbar + scroll progress + back to top ──
     const navbar = document.getElementById('navbar');
-    window.addEventListener('scroll', () => {
-      navbar.classList.toggle('scrolled', window.scrollY > 50);
-    });
+    const progress = document.getElementById('scrollProgress');
+    const backToTop = document.getElementById('backToTop');
+    const timeline = document.querySelector('[data-timeline]');
+    function onScroll() {
+      const y = window.scrollY;
+      navbar.classList.toggle('scrolled', y > 50);
+      backToTop.classList.toggle('visible', y > 400);
+      const max = document.documentElement.scrollHeight - window.innerHeight;
+      progress.style.transform = `scaleX(${max > 0 ? y / max : 0})`;
 
-    // ── Scroll Spy ──
-    const sections = document.querySelectorAll('.section');
+      // Timeline line draws as you scroll through it
+      if (timeline) {
+        const r = timeline.getBoundingClientRect();
+        const vh = window.innerHeight;
+        const pct = Math.min(Math.max((vh * 0.75 - r.top) / r.height, 0), 1);
+        timeline.style.setProperty('--tl-progress', pct);
+      }
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+    backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+    // ── Scroll spy ──
     const navLinks = document.querySelectorAll('.nav-link');
     const spyObserver = new IntersectionObserver(entries => {
       entries.forEach(entry => {
@@ -482,10 +670,10 @@
           if (active) active.classList.add('active');
         }
       });
-    }, { threshold: 0.3 });
-    sections.forEach(s => spyObserver.observe(s));
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    document.querySelectorAll('.section').forEach(s => spyObserver.observe(s));
 
-    // ── Scroll Reveal ──
+    // ── Scroll reveal ──
     const revealObserver = new IntersectionObserver(entries => {
       entries.forEach(e => {
         if (e.isIntersecting) { e.target.classList.add('revealed'); revealObserver.unobserve(e.target); }
@@ -493,26 +681,24 @@
     }, { threshold: 0.1 });
     document.querySelectorAll('.animate-on-scroll').forEach(el => revealObserver.observe(el));
 
-    // ── Counter Animation ──
+    // ── Counters ──
     const counterObserver = new IntersectionObserver(entries => {
       entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const el = entry.target;
-          const target = +el.dataset.count;
-          let current = 0;
-          const step = Math.ceil(target / 30);
-          const timer = setInterval(() => {
-            current += step;
-            if (current >= target) { current = target; clearInterval(timer); }
-            el.textContent = current;
-          }, 50);
-          counterObserver.unobserve(el);
-        }
+        if (!entry.isIntersecting) return;
+        const el = entry.target;
+        const target = +el.dataset.count;
+        let current = 0;
+        const timer = setInterval(() => {
+          current++;
+          el.textContent = current;
+          if (current >= target) clearInterval(timer);
+        }, 180);
+        counterObserver.unobserve(el);
       });
     }, { threshold: 0.5 });
     document.querySelectorAll('.stat-number').forEach(el => counterObserver.observe(el));
 
-    // ── Skill Tabs ──
+    // ── Skill tabs ──
     document.querySelectorAll('.tab-btn').forEach(btn => {
       btn.addEventListener('click', () => {
         document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
@@ -522,16 +708,17 @@
       });
     });
 
-    // ── Tilt Effect on Project Cards ──
+    // ── Tilt + spotlight on project cards ──
     document.querySelectorAll('[data-tilt]').forEach(card => {
       card.addEventListener('mousemove', e => {
         const rect = card.getBoundingClientRect();
         const x = e.clientX - rect.left;
         const y = e.clientY - rect.top;
-        const centerX = rect.width / 2;
-        const centerY = rect.height / 2;
-        const rotateX = (y - centerY) / 20;
-        const rotateY = (centerX - x) / 20;
+        card.style.setProperty('--mx', x + 'px');
+        card.style.setProperty('--my', y + 'px');
+        if (reduceMotion) return;
+        const rotateX = (y - rect.height / 2) / 20;
+        const rotateY = (rect.width / 2 - x) / 20;
         card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02,1.02,1.02)`;
       });
       card.addEventListener('mouseleave', () => {
@@ -539,7 +726,20 @@
       });
     });
 
-    // ── Mobile Menu ──
+    // ── Magnetic buttons ──
+    if (!reduceMotion && window.matchMedia('(hover: hover)').matches) {
+      document.querySelectorAll('.magnetic').forEach(btn => {
+        btn.addEventListener('mousemove', e => {
+          const r = btn.getBoundingClientRect();
+          const x = (e.clientX - r.left - r.width / 2) * 0.25;
+          const y = (e.clientY - r.top - r.height / 2) * 0.35;
+          btn.style.transform = `translate(${x}px, ${y}px)`;
+        });
+        btn.addEventListener('mouseleave', () => { btn.style.transform = ''; });
+      });
+    }
+
+    // ── Mobile menu ──
     const hamburger = document.getElementById('navHamburger');
     const mobileMenu = document.getElementById('mobileMenu');
     hamburger.addEventListener('click', () => {
@@ -556,13 +756,6 @@
         hamburger.setAttribute('aria-expanded', 'false');
       });
     });
-
-    // ── Back to Top ──
-    const backToTop = document.getElementById('backToTop');
-    window.addEventListener('scroll', () => {
-      backToTop.classList.toggle('visible', window.scrollY > 400);
-    });
-    backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
   </script>
 </body>
 </html>
